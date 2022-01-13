@@ -1,0 +1,28 @@
+﻿@model Projekat.Models.mainModel
+
+@{
+    ViewBag.Title = "Plan";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@section naslov {Service Plan}
+
+
+@using (Html.BeginForm("Plan", "Site", FormMethod.Post, new { @class = "contact-form" }))
+{
+    <p>Name and surname: @Html.TextBoxFor(x => x.ServicePlan.Name)</p>
+    <p>Email: @Html.TextBoxFor(x => x.ServicePlan.Email)</p>
+    <p>Website url: @Html.TextBoxFor(x => x.ServicePlan.Website)</p>
+    <p>
+        Gender:
+        Male: @Html.RadioButtonFor(x => x.ServicePlan.Gender, "Male")
+        Female: @Html.RadioButtonFor(x => x.ServicePlan.Gender, "Female")
+    </p>
+
+    <p>
+        @Html.DropDownListFor(x => x.ServicePlan.Company, new SelectList(ViewBag.name, ViewBag.name))
+    </p>
+
+    <p> I want a plan @Html.CheckBoxFor(x => x.ServicePlan.Plan)</p>
+    <input type="submit" id="submit-button" value="Send Message" />
+}

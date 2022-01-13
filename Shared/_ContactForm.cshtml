@@ -1,0 +1,18 @@
+﻿@model Projekat.Models.mainModel
+
+@section Naslov {Contact form}
+
+@using (Html.BeginForm("Contact", "Site", FormMethod.Post, new { @class = "contact-form" }))
+{
+    <p>Name and surname: @Html.TextBoxFor(x => x.Contact.Name)</p>
+    <p>Email: @Html.TextBoxFor(x => x.Contact.Email)</p>
+    <p>Website url: @Html.TextBoxFor(x => x.Contact.Website)</p>
+    <p>
+        Gender:
+        Male: @Html.RadioButtonFor(x => x.Contact.Gender, "Male")
+        Female: @Html.RadioButtonFor(x => x.Contact.Gender, "Female")
+    </p>
+    <p>Message: @Html.TextAreaFor(x => x.Contact.Message)</p>
+
+    <input type="submit" id="submit-button" value="Send Message"/>
+}

@@ -1,0 +1,32 @@
+﻿@model Projekat.Models.mainModel
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@section naslov {Contact}
+
+<section class="contact section-padding">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 mx-auto col-md-7 col-12 py-5 mt-5 text-center" data-aos="fade-up">
+
+                <h1 class="mb-4">READY TO GET <strong>GROWING </strong><strong>YOUR BUSINESS</strong>?</h1>
+
+                <p>
+                    Please, let us know your name, email address, your website domain and a
+                    short briefing on what field you are looking for digital marketing solutions.
+                </p>
+            </div>
+
+            @{ Html.RenderPartial("_ContactForm");}
+
+        </div>
+    </div>
+</section>
+
+
+
+

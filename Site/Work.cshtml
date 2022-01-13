@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "What we do";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@section naslov {What we do}
+
+<section class="about section-padding pb-0" id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-7 mx-auto col-md-10 col-12">
+                <div class="about-info">
+
+                    <h2 class="mb-4" data-aos="fade-up">The best <strong>Digital Marketing agency</strong> in Rio de Janeiro</h2>
+
+                    <p class="mb-0" data-aos="fade-up">
+                        We constantly do our best to help our clients optimise, grow and scale. It’s a partnership. If you grow, we grow, too. <a href="blog.html">blog</a> pages, <a href="project-detail.html">project</a> page, and <a href="contact.html">contact</a> page.
+                    </p>
+                </div>
+                @{ Html.RenderPartial("_MoreAbout");}
+                <div class="about-image" data-aos="fade-up" data-aos-delay="200">
+
+                    <img src="~/Images/office.png" class="img-fluid" alt="office">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+

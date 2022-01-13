@@ -1,0 +1,143 @@
+﻿@model Projekat.Models.mainModel
+
+@{
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@section naslov {Type of service}
+
+@{
+    var message = "Your choice: ";
+}
+
+@if (Model.Service.Choice == "Export")
+{
+    <section class="about section-padding pb-0" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-7 mx-auto col-md-10 col-12">
+                    <div class="about-info">
+
+                        <h2 class="mb-4" data-aos="fade-up">@message  <strong>@Model.Service.Choice </strong></h2>
+
+                        <p class="mb-0" data-aos="fade-up">
+                            Do you have a well-going business in 1 country, and are you about to export your product or service?
+                        </p>
+                        <hr>
+
+                        <h3 class="mb-0" data-aos="fade-up">
+                            Do you have a well-going business in 1 country, and are you about to export your product or service?
+                        </h3>
+
+                        <p class="mb-0" data-aos="fade-up">
+                            Or are you sailing immediately to international waters right at the start?
+                        </p>
+                        <hr>
+
+                        <h3 class="mb-0" data-aos="fade-up">
+                            At MarketingLens, we help you enter international markets with strategic planning and operational execution.
+                            We have been running online marketing campaigns in 20+ countries.
+                        </h3>
+
+                        <p class="mb-0" data-aos="fade-up">
+                            You excel in your business. We excel in selling your services, products online.
+                        </p>
+                    </div>
+                    <div class="about-image" data-aos="fade-up" data-aos-delay="200">
+
+                        <img src="~/Images/newsletter.png" class="img-fluid" alt="office">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+}
+else if (Model.Service.Choice == "Startup")
+{
+    <section class="about section-padding pb-0" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-7 mx-auto col-md-10 col-12">
+                    <div class="about-info">
+
+                        <h2 class="mb-4" data-aos="fade-up">@message  <strong>@Model.Service.Choice </strong></h2>
+
+                        <p class="mb-0" data-aos="fade-up">
+                            We know how hard it is to start a business. We also know that there are no payoffs at the end of an easy road.
+                            We are here to make that major task that little bit lighter on your shoulders.
+                        </p>
+                        <hr>
+
+                        <h3 class="mb-0" data-aos="fade-up">
+                            The world’s greatest CEOs have one great trait in common.
+                        </h3>
+
+                        <p class="mb-0" data-aos="fade-up">
+                            They know their weaknesses. They assign and trust the best minds in the field to deliver where they cannot.
+                            We are those minds.
+                            We can transform your one-page marketing plan into a fully-fledged, world wide, digital marketing strategy.
+                        </p>
+                        <hr>
+
+                        <h3 class="mb-0" data-aos="fade-up">
+                            We have been there and done that.
+                        </h3>
+
+                        <p class="mb-0" data-aos="fade-up">
+                            We can spare you that learning curve.
+                            You can place your trust our in professional, highly experienced team to bring your vision to the future, to digitize your ideas and spread them across the world.
+                            We don’t just minimize your costs with our tailored strategy, we also help you scale with a lean Startup mindset.
+                        </p>
+                    </div>
+                    <div class="about-image" data-aos="fade-up" data-aos-delay="200">
+
+                        <img src="~/Images/newsletter.png" class="img-fluid" alt="office">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <section class="about section-padding pb-0" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-7 mx-auto col-md-10 col-12">
+                    <div class="about-info">
+
+                        <h2 class="mb-4" data-aos="fade-up">@message  <strong>@Model.Service.Choice </strong></h2>
+
+                        <p class="mb-0" data-aos="fade-up">
+                            Our online trading voucher gives you the power to bring your business to the next level! With a generous grant of 2,500 EUR,
+                            cutting the cost by an impressive 50%,
+                            you can achieve a jaw-dropping web presence and enter the digital world with the help of MarketingLens!
+                        </p>
+                        <hr>
+
+                        <p class="mb-0" data-aos="fade-up">
+                            We take care of all aspects of your online journey, bringing the seed of your vision from kernel to bloom.
+                            We start by building your website from the ground up, then we tweak and optimise to perfection with SEO and then
+                            follow right through to the all-important sales with online advertising. We create a tailored digital marketing strategy for your specific needs.
+                            Your business will flourish with support from your Local Enterprise Office and our dedicated team at MarketingLens.
+                        </p>
+                        <hr>
+                    </div>
+
+                    <div class="about-image" data-aos="fade-up" data-aos-delay="200">
+
+                        <img src="~/Images/newsletter.png" class="img-fluid" alt="office">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+}
+<a href="Plan" id="button-service" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Ready to hire us?</a>
+

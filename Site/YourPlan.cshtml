@@ -1,0 +1,48 @@
+﻿@model Projekat.Models.mainModel
+@using Projekat.helperi
+@{
+    ViewBag.Title = "Plan";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@section naslov {Form answer}
+
+
+@{
+    var message1 = "thank you for chossing to work with us!";
+    var message = "";
+    var choice = "";
+
+    if (Model.ServicePlan.Plan == true)
+    {
+        message = "We see that u need a plan! Someone will contact you soon...";
+        choice = "I want it";
+    }
+    else
+    {
+        message = "We see that you already have a plan! Someone will contact you soon...";
+        choice = "I do not want it";
+    }
+}
+<section class="contact section-padding">
+    <div class="container">
+        <div class="row">
+            <div class=" mt-5 text-center" data-aos="fade-up">
+                <h1 class="mb-4">@Model.ServicePlan.Name, <strong>@message1 </strong>!</h1>
+            </div>
+            <div class="form-answer">
+                <h3>Name and surname: @Model.ServicePlan.Name</h3>
+                <h3>Email: @Model.ServicePlan.Email</h3>
+                <h3>Website: @Model.ServicePlan.Website</h3>
+                <h3>Gender: @Model.ServicePlan.Gender</h3>
+                <h3>Company: @helperi.logoHelper("../Content/slike/WebFX.jpg", Model.ServicePlan.Company)</h3>
+                <h3>Plan: @choice</h3>
+                <hr>
+                <h3 style="font-weight:bolder">@message</h3>
+
+
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+﻿@model Projekat.Models.mainModel
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@section naslov {Contact answer}
+
+@{ 
+    var message = "thank you for contacting us";
+}
+
+<section class="contact section-padding">
+    <div class="container">
+        <div class="row">
+            <div class=" mt-5 text-center" data-aos="fade-up">
+                <h1 class="mb-4">@Model.Contact.Name, <strong>@message </strong>!</h1>
+            </div>
+            <div class="form-answer">
+                <h2>Name and surname: @Model.Contact.Name</h2>
+                <h2>Email: @Model.Contact.Email</h2>
+                <h2>Website: @Model.Contact.Website</h2>
+                <h2>Gender: @Model.Contact.Gender</h2>
+                <h2>Message: @Model.Contact.Message</h2>
+            </div>
+            @if (Model.Contact.Gender == "Female")
+            {
+                <img src="~/Images/female-avatar.png" id="image-contact" alt="working girl">
+            }
+            else
+            {
+                <img src="~/Images/male-avatar.png" id="image-contact" alt="working girl">
+            }
+
+        </div>
+    </div>
+</section>

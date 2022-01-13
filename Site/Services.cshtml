@@ -1,0 +1,41 @@
+﻿@model Projekat.Models.mainModel
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@section naslov {Services}
+
+<section class="hero hero-bg d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                <div class="hero-text">
+
+                    <h1 class="text-white" data-aos="fade-up">
+                        @using (Html.BeginForm("Services", "Site", FormMethod.Post))
+                         {
+
+                        <h4> Select a type of service: <br>
+                            @Html.DropDownListFor(x => x.Service.Choice, new SelectList(ViewBag.name, ViewBag.name))
+
+                            <input id="button" type="submit" value="Submit" />
+                        </h4>
+                            
+                         }
+
+                    </h1>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+
+                    <img src="~/Images/blog-sidebar-image01.jpg" class="img-fluid" alt="working girl">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
